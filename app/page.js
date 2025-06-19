@@ -11,6 +11,7 @@ const Home = async () => {
   // })
   // const data = await response.json()
   const response = await fetch("https://backend-authentication-taupe.vercel.app/api/v1/blog", {
+    cache: "no-store",
     next: {
       revalidate: 10 // api call after 50 seconds
     }
